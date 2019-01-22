@@ -11,7 +11,7 @@ module.exports = {
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         res.header("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
         let ip = req.ip + " - " + req.connection.remoteAddress
-        console.debug(ip, req.path)
+        console.log(ip, req.path)
         next();
     }
 
