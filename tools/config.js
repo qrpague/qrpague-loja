@@ -2,9 +2,9 @@
 
 var Config = {
 	PROTOCOL: 'http',
-	PORT :  9090,
-	HOST : '0.0.0.0',
-	WEBSOCKET_PORT : 9091,
+	PORT :  9094,
+	HOST : '127.0.0.1',
+	WEBSOCKET_PORT : 7001,
  
    
 };
