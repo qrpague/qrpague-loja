@@ -25,7 +25,7 @@ header {
     margin-left: 0;
     margin-right: 3%;
     background: #f7d100;
-    padding: 10px;
+    padding: 20px;
     text-align: center
 }
 
@@ -498,14 +498,19 @@ header h2 {
     }
 }
 
+@media only screen and (min-width: 400px) {
+    .action-buttons {
+        padding: 30px 45px 0px 45px;
+        text-align: right;
+
+    }
+}
 .action-buttons {
     float: left;
     clear: none;
     width: 100%;
     margin-left: 0;
     margin-right: 3%;
-    padding: 30px 45px 0px 45px;
-    text-align: right;
 }
 
 .action-buttons:last-child {
