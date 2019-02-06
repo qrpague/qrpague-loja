@@ -1,98 +1,103 @@
 <main class="app" ng-controller="HomeController">
     <div class="sub-header">
-      <h5>Ofertas especiais</h5>
-      <div class="divisor"></div>
+        <h5>Ofertas especiais</h5>
+        <div class="divisor"></div>
     </div>
     <div class="bx-products">
-      <div class="product-item"><a ng-href="./produto-detalhe"><img src="images/p1.png" alt="produto exemplo"></a><a ng-href="./produto-detalhe">
-          <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p></a><img src="images/stars.png" alt="">
-        <div class="bx-price">
-          <p>37 ofertas a partir de:</p>
-          <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+
+        <div class="product-item" ng-repeat="(key, value) in produtos" ng-if="value.url">
+            <a ng-click=" detail( value ) ">
+                <img src="{{ value.url }}" alt="produto exemplo">
+            </a>
+            <a ng-click=" detail( value ) ">
+                <p>{{ value.titulo }}</p>
+            </a>
+            <img src="images/stars.png" alt="">
+            <div class="bx-price">
+                <p>37 ofertas a partir de:</p>
+                <h3>R$ {{ value.valor }}</h3>
+                <span>9x de R$ 74,33 sem juros</span>
+            </div>
         </div>
-      </div>
-      <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p2.png" alt="produto exemplo"></a><a ng-href="produto-detalhe">
-          <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p></a><img src="images/stars.png" alt="">
-        <div class="bx-price">
-          <p>37 ofertas a partir de:</p>
-          <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
-        </div>
-      </div>
-      <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p3.png" alt="produto exemplo"></a><a ng-href="produto-detalhe">
-          <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p></a><img src="images/stars.png" alt="">
-        <div class="bx-price">
-          <p>37 ofertas a partir de:</p>
-          <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
-        </div>
-      </div>
-      <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p4.png" alt="produto exemplo"></a><a ng-href="produto-detalhe">
-          <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p></a><img src="images/stars.png" alt="">
-        <div class="bx-price">
-          <p>37 ofertas a partir de:</p>
-          <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
-        </div>
-      </div>
+
+
     </div>
     <div class="sub-header">
-      <h5>Promoções</h5>
-      <div class="divisor"></div>
+        <h5>Promoções</h5>
+        <div class="divisor"></div>
     </div>
     <div class="bx-products">
-      <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p1.png" alt="produto exemplo"></a><a ng-href="produto-detalhe">
-          <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p></a><img src="images/stars.png" alt="">
-        <div class="bx-price">
-          <p>37 ofertas a partir de:</p>
-          <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+        <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p1.png" alt="produto exemplo"></a><a
+                ng-href="produto-detalhe">
+                <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p>
+            </a><img src="images/stars.png" alt="">
+            <div class="bx-price">
+                <p>37 ofertas a partir de:</p>
+                <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+            </div>
         </div>
-      </div>
-      <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p2.png" alt="produto exemplo"></a><a ng-href="produto-detalhe">
-          <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p></a><img src="images/stars.png" alt="">
-        <div class="bx-price">
-          <p>37 ofertas a partir de:</p>
-          <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+        <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p2.png" alt="produto exemplo"></a><a
+                ng-href="produto-detalhe">
+                <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p>
+            </a><img src="images/stars.png" alt="">
+            <div class="bx-price">
+                <p>37 ofertas a partir de:</p>
+                <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+            </div>
         </div>
-      </div>
-      <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p3.png" alt="produto exemplo"></a><a ng-href="produto-detalhe">
-          <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p></a><img src="images/stars.png" alt="">
-        <div class="bx-price">
-          <p>37 ofertas a partir de:</p>
-          <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+        <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p3.png" alt="produto exemplo"></a><a
+                ng-href="produto-detalhe">
+                <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p>
+            </a><img src="images/stars.png" alt="">
+            <div class="bx-price">
+                <p>37 ofertas a partir de:</p>
+                <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+            </div>
         </div>
-      </div>
-      <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p4.png" alt="produto exemplo"></a><a ng-href="produto-detalhe">
-          <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p></a><img src="images/stars.png" alt="">
-        <div class="bx-price">
-          <p>37 ofertas a partir de:</p>
-          <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+        <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p4.png" alt="produto exemplo"></a><a
+                ng-href="produto-detalhe">
+                <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p>
+            </a><img src="images/stars.png" alt="">
+            <div class="bx-price">
+                <p>37 ofertas a partir de:</p>
+                <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+            </div>
         </div>
-      </div>
-      <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p1.png" alt="produto exemplo"></a><a ng-href="produto-detalhe">
-          <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p></a><img src="images/stars.png" alt="">
-        <div class="bx-price">
-          <p>37 ofertas a partir de:</p>
-          <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+        <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p1.png" alt="produto exemplo"></a><a
+                ng-href="produto-detalhe">
+                <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p>
+            </a><img src="images/stars.png" alt="">
+            <div class="bx-price">
+                <p>37 ofertas a partir de:</p>
+                <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+            </div>
         </div>
-      </div>
-      <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p2.png" alt="produto exemplo"></a><a ng-href="produto-detalhe">
-          <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p></a><img src="images/stars.png" alt="">
-        <div class="bx-price">
-          <p>37 ofertas a partir de:</p>
-          <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+        <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p2.png" alt="produto exemplo"></a><a
+                ng-href="produto-detalhe">
+                <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p>
+            </a><img src="images/stars.png" alt="">
+            <div class="bx-price">
+                <p>37 ofertas a partir de:</p>
+                <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+            </div>
         </div>
-      </div>
-      <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p3.png" alt="produto exemplo"></a><a ng-href="produto-detalhe">
-          <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p></a><img src="images/stars.png" alt="">
-        <div class="bx-price">
-          <p>37 ofertas a partir de:</p>
-          <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+        <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p3.png" alt="produto exemplo"></a><a
+                ng-href="produto-detalhe">
+                <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p>
+            </a><img src="images/stars.png" alt="">
+            <div class="bx-price">
+                <p>37 ofertas a partir de:</p>
+                <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+            </div>
         </div>
-      </div>
-      <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p4.png" alt="produto exemplo"></a><a ng-href="produto-detalhe">
-          <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p></a><img src="images/stars.png" alt="">
-        <div class="bx-price">
-          <p>37 ofertas a partir de:</p>
-          <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+        <div class="product-item"><a ng-href="produto-detalhe"><img src="images/p4.png" alt="produto exemplo"></a><a
+                ng-href="produto-detalhe">
+                <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p>
+            </a><img src="images/stars.png" alt="">
+            <div class="bx-price">
+                <p>37 ofertas a partir de:</p>
+                <h3>R$699,00</h3><span>9x de R$ 74,33 sem juros</span>
+            </div>
         </div>
-      </div>
     </div>
-  </main>
+</main>

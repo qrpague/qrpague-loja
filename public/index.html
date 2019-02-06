@@ -17,6 +17,9 @@
 
   <script type="text/javascript" src="js/others-modules/angular.min.js"></script>
   <script type="text/javascript" src="js/others-modules/angular-route.js"></script>
+
+  <script src="js/others-modules/qrcode.min.js"></script>
+
   
   <script type="text/javascript" src="js/config.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
@@ -50,7 +53,9 @@
         <li><a href="">Categoria</a></li>
         <li><a href="">Categoria</a></li>
       </ul>
-    </nav><img class="banner" src="images/banner.png" alt="">
+    </nav>
+    
+    <img class="banner" src="images/banner.png" ng-if="isBanner">
 
     <ng-view></ng-view>
 

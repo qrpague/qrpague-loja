@@ -10,9 +10,13 @@
     <div id="tab-2" class="tab-content"><img src="images/cartao-credito.svg" alt=""></div>
     <div id="tab-3" class="tab-content current">
       <div class="qrcode">
-        <p>QR CODE</p><a ng-href="checkout-result"><img src="images/qrpague.png" alt=""></a>
-        <h3>Total: R$1.398,00</h3><a class="bot-pagar" ng-href="checkout-result"><img src="images/bot-pagar.svg" alt=""></a><a
-          class="bot-mobile-bank" ng-href="checkout-result"><img src="images/bot-mobile-bank.svg" alt=""></a>
+        <p>QR CODE</p>
+        <!-- <a ng-href="checkout-result"><img src="images/qrpague.png" alt=""></a> -->
+        <div id="qrcode"></div>
+
+        <h3>Total: R$ {{ order.valor }}</h3>
+        <a class="bot-pagar" ng-href="checkout-result"><img src="images/bot-pagar.svg" alt=""></a>
+        <a class="bot-mobile-bank" ng-href="checkout-result"><img src="images/bot-mobile-bank.svg" alt=""></a>
       </div>
     </div>
   </div>

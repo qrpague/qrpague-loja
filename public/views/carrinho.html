@@ -1,11 +1,12 @@
 <main class="app" ng-controller="CarrinhoController">
-  <div class="cart-list">
-    <div class="thumb"><img src="images/thumb2.png" alt=""></div>
+
+  <div class="cart-list" ng-repeat="item in carrinho">
+    <div class="thumb"><img src=" {{ item.thumb }}" alt=""></div>
     <div class="desc">
-      <p>Smartphone LG K10 Novo Dual Chip Android 7.0 Tela 5,3" 32GB 4G 13MP - Preto</p>
+      <p>{{ item.titulo }}</p>
     </div>
     <div class="price">
-      <p>R$699,00</p>
+      <p>R$ {{ item.valor }}</p>
     </div>
     <div class="qtd">
       <input type="text" value="1">
@@ -19,11 +20,11 @@
       <input type="text">
     </div>
     <div class="total">
-      <p>Total: R$1.900,00</p>
+      <p>Total: R$ {{ total()}}</p>
     </div>
   </div>
   <div class="action-buttons">
-    <img src="images/bot-continuar-comprando.svg" alt="">
-    <a ng-href="checkout"> <img src="images/bot-finalizar.svg" alt=""></a>
+    <img src="images/bot-continuar-comprando.svg" alt="" ng-click="voltar()">
+    <img src="images/bot-finalizar.svg" alt="" ng-click="finalizar()">
   </div>
 </main>

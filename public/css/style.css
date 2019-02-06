@@ -375,36 +375,44 @@ header h2 {
     .cart-list>.thumb {
         float: left;
         clear: none;
-        width: 100%;
+        width: auto;
         margin-left: 0;
         margin-right: 3%;
         text-align: center;
-        margin-bottom: 15px
+        margin-bottom: 15px;
     }
+    
+    .cart-list>.qtd {
+        display: none;
+     }
+     .cart-list>.bot-remove {
+        display: none;
+     }
     .cart-list>.thumb:last-child {
         margin-right: 0
     }
     .cart-list>.desc {
         float: left;
         clear: none;
-        width: 100%;
+        width: 50%;
         margin-left: 0;
-        margin-right: 3%
+        margin-right: 3%;
+        font-size: 10px;
     }
     .cart-list>.desc:last-child {
         margin-right: 0
     }
     .cart-list>.price {
-        float: left;
+        float: right;
         clear: none;
-        width: 48.5%;
+        width: 0%;
         margin-left: 0;
         margin-right: 3%;
         font-family: "Open Sans";
         font-size: 22px;
         font-weight: 700;
         color: #000;
-        margin-top: 30px
+        margin-top: 0px
     }
     .cart-list>.price:last-child {
         margin-right: 0

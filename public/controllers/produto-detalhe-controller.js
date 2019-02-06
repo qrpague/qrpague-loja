@@ -1,19 +1,16 @@
- app.controller("ProdutoDetalheController", function ($scope) {
+app.controller("ProdutoDetalheController", function ($scope, $rootScope,$location) {
 
-    var me = this;
-    var escopo = $scope;
-
+   $scope.produto = $rootScope.produto
 
 
-     
+   $scope.comprar = function( ) {
 
+    $rootScope.carrinho = $rootScope.carrinho || []  
+    $rootScope.carrinho.push( $scope.produto )
+    $location.path('carrinho');
 
-
-
-
-
-
-
+   }
+ 
 });
 
 

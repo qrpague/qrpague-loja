@@ -1,13 +1,33 @@
- app.controller("CarrinhoController", function ($scope) {
+app.controller("CarrinhoController", function ($http, $scope, $rootScope, $location) {
 
-    var me = this;
-    var escopo = $scope;
+    $scope.carrinho = $rootScope.carrinho
+    console.log( $scope.carrinho )
 
+    $scope.voltar = function () {
+        $location.path('/');
 
+    }
 
+    $scope.finalizar = function () {
+        $rootScope.order = {
+            itens : $scope.carrinho,
+            valor : $scope.total(),
+            terminal: connectApp.terminal
 
+        }
 
+        $location.path('checkout');
 
+    }
+    $scope.total = function(){
+        let total = 0
+
+        $scope. carrinho.forEach( produtos =>{
+            total = total + produtos.valor
+        })
+
+        return truncateNumber(total,2) 
+    }
 });
 
 

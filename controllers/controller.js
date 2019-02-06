@@ -2,7 +2,7 @@
 
 let Payments = require(global.pathRootApp + '/resources/payments');
 let socket = require(global.pathRootApp + '/tools/websocket-server.js');
-let Config = require('../tools/config')
+let Config = require( global.pathRootApp + '/tools/config')
 
 module.exports = {
 
@@ -43,7 +43,7 @@ module.exports = {
 				versao: 1,
 				cnpjInstituicao: "01234567890123",
 				valor: operacao.valor,
-				descricao: "Pagamento Loja McBurgues",
+				descricao: "Mercado Azul",
 				dataHoraSolicitacao: new Date(),
 				dataHoraVencimento: new Date(),
 				dataHoraEfetivacao: new Date(),
