@@ -33,7 +33,8 @@ app.controller("CheckoutController", function ($http, $scope, $rootScope, $locat
             }
             $scope.stringQrcode = result.data
             qrcode.clear();
-            qrcode.makeCode($scope.stringQrcode);         })
+            qrcode.makeCode($scope.stringQrcode);         
+        })
     
     }
 
