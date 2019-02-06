@@ -10,7 +10,7 @@ app.controller("CarrinhoController", function ($http, $scope, $rootScope, $locat
 
     $scope.finalizar = function () {
         $rootScope.order = {
-            itens : $scope.carrinho,
+            itens : { dados :  $scope.carrinho },
             valor : $scope.total(),
             terminal: connectApp.terminal
 
