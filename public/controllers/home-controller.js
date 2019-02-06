@@ -32,7 +32,9 @@
          })
     
     }
-
+    $scope.home = function() {
+        $location.path('/');
+    }
     $scope.requestProdutos()
 
 

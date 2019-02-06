@@ -1,6 +1,7 @@
 app.controller("ProdutoDetalheController", function ($scope, $rootScope,$location) {
 
    $scope.produto = $rootScope.produto
+   $rootScope.isBanner = false 
 
 
    $scope.comprar = function( ) {
