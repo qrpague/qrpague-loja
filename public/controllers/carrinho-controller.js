@@ -7,10 +7,21 @@ app.controller("CarrinhoController", function ($http, $scope, $rootScope, $locat
         $location.path('/');
 
     }
+        
+//{ indice: new Date(), dados: me.listaSanduiches[id] }
+
 
     $scope.finalizar = function () {
+
+        let itensQrpague = []
+        $scope.carrinho.forEach( item => {
+            
+            let produto = { indice : new Date() , dados : item }
+            itensQrpague.push( produto )
+        })
+
         $rootScope.order = {
-            itens : { dados :  $scope.carrinho },
+            itens : itensQrpague ,
             valor : $scope.total(),
             terminal: connectApp.terminal
 
