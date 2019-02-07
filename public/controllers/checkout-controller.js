@@ -37,7 +37,9 @@ app.controller("CheckoutController", function ($http, $scope, $rootScope, $locat
         })
     
     }
-
+    $scope.result = function(){
+        $location.path('checkout-result');
+    }
     $scope.criarOrdemPagamentoDigital()
 
 

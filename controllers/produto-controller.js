@@ -13,7 +13,6 @@ module.exports = {
 			if (!produto) {
 				return next('QRPAGUE_VAREJISTA_WEB_QRCODE_PARAMS_EMPTY')
 			}
-
 		 
 			return res.status(200).send({});
 		} catch (error) {
