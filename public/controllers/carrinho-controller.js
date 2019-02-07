@@ -1,6 +1,8 @@
 app.controller("CarrinhoController", function ($http, $scope, $rootScope, $location) {
 
-    $scope.carrinho = $rootScope.carrinho
+    $scope.carrinho = $rootScope.carrinho || StorageSFD.getArray( "carrinho" )
+    $rootScope.isBanner = false 
+
     console.log( $scope.carrinho )
 
     $scope.voltar = function () {
@@ -9,10 +11,19 @@ app.controller("CarrinhoController", function ($http, $scope, $rootScope, $locat
     }
         
 //{ indice: new Date(), dados: me.listaSanduiches[id] }
-
+    $scope.delete = function( id ){
+        $scope.carrinho.forEach( (item, index, array) => {
+            if ( item.id === id ) {
+                array.splice(index, 1);
+                StorageSFD.clearAll()
+                StorageSFD.save( "carrinho" , array )
+            }
+        }) 
+       
+    }
 
     $scope.finalizar = function () {
-
+ 
         let itensQrpague = []
         $scope.carrinho.forEach( item => {
             
@@ -27,12 +38,16 @@ app.controller("CarrinhoController", function ($http, $scope, $rootScope, $locat
 
         }
 
+
+
         $location.path('checkout');
 
     }
     $scope.total = function(){
         let total = 0
-
+        if ( !$scope. carrinho ) {
+            return 0
+        }
         $scope. carrinho.forEach( produtos =>{
             total = total + produtos.valor
         })

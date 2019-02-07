@@ -43,12 +43,35 @@ header:last-child {
     margin-right: 0
 }
  
+ 
+header a {
+    display: block;
+    position: absolute;
+    top: 17px;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header .left {
+    display: none;
+}
+.header .right {
+    right: 17px;
+}
+
 header span {
-    /* font-family: "Open Sans"; */
+    font-family: 'Roboto', sans-serif;
     float: left;
-    /* font-weight: 800; */
+    font-weight: 800;
+    width: 0%;
     font-size: 18px;
     color: #2c307d;
+    text-align: center;
+
+    cursor: pointer;
+
 }
 header input {
     float: center;
@@ -90,9 +113,15 @@ header input {
     margin-right: 3%;
     background: #fff;
     border-bottom: 1px solid #E5E5E5;
-    padding-bottom: 200px
+    padding-bottom: 100px
 }
+.app>.status  {
+    padding: 10px;
+    text-align: center;
+    background-color: #ccc;
+    color: white;
 
+}
 .app:last-child {
     margin-right: 0
 }
@@ -320,6 +349,7 @@ header input {
     margin-right: 3%
 }
 
+
 .cart-list>.desc:last-child {
     margin-right: 0
 }
@@ -387,6 +417,20 @@ header input {
 }
 
 @media all and (min-width: 20em) and (max-width: 39.9375em) {
+
+    .header a {
+        top: 10px;
+    }
+    .header .left {
+        left: 17px;
+        display: initial;
+    }
+    .header .right {
+        right: 17px;
+    }
+    .cart-list {
+        padding: 10px;
+    }
     .cart-list>.thumb {
         float: left;
         clear: none;
@@ -417,17 +461,22 @@ header input {
     .cart-list>.desc:last-child {
         margin-right: 0
     }
+
+
+    .cart-list>.desc p {
+        margin: 25px 0 10px;
+    }
+
     .cart-list>.price {
-        float: right;
         clear: none;
         width: 0%;
         margin-left: 0;
         margin-right: 3%;
         font-family: "Open Sans";
-        font-size: 22px;
+        font-size: 15px;
         font-weight: 700;
         color: #000;
-        margin-top: 0px
+        margin-top: 20px
     }
     .cart-list>.price:last-child {
         margin-right: 0
@@ -629,6 +678,7 @@ header input {
         height: 100%;
         overflow: hidden
     }
+    
 }
 
 .product-details {
@@ -1021,7 +1071,8 @@ header input {
 }
 
 .container-pag img {
-    width: 100%
+     width: 100%;
+     float: inherit;
 }
 
 ul.tabs {

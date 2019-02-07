@@ -1,4 +1,4 @@
- app.controller("HomeController" , function($http, $scope, $rootScope, $location) {
+ app.controller("HomeController" , function($window, $http, $scope, $rootScope, $location) {
 
     $scope.produtos = []
     $rootScope.produtos = []   
@@ -11,7 +11,8 @@
 
     $scope.detail = function( item ) {
         $rootScope.produto = item
-        $location.path('produto-detalhe');
+ 
+        $location.url('produto-detalhe?produto='+ JSON.stringify(item));
     }
     $scope.requestProdutos = function(){
 
@@ -29,11 +30,16 @@
                 return Msg( "Erro consulta produtos")
             }
             $scope.produtos = result.data
+            $rootScope.produtos = result.data
          })
     
     }
+    
+    $scope.go_back = function(){
+        $window.history.back();
+    }
     $scope.home = function() {
-        $location.path('/');
+        $location.url('/');
     }
     $scope.requestProdutos()
 

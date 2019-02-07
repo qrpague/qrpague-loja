@@ -1,6 +1,7 @@
- app.controller("CheckoutResultController", function ($scope) {
+ app.controller("CheckoutResultController",  function ($http, $scope, $rootScope, $location) {
 
- 
+    $rootScope.isBanner = false 
+
 
     
 

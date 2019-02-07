@@ -1,5 +1,11 @@
 var app = angular.module('myApp', ['ngRoute']);
 
+app.run(function($rootScope) {
+    $rootScope.$on("$locationChangeStart", function(event, next, current) { 
+        console.log( event , next , current)
+        setTimeout( function (){ $( "html" ).scrollTop( 0 );  }, 100)
+    });
+});
 
 
 
@@ -39,3 +45,5 @@ app.config(['$routeProvider', '$locationProvider', function AppConfig($routeProv
     // });
     // $locationProvider.hashPrefix('!');
 }]);
+
+
