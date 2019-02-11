@@ -1,4 +1,4 @@
-app.controller("CheckoutController", function ($http, $scope, $rootScope, $location) {
+app.controller("CheckoutController", function ($http, $scope, $rootScope, $location, $window ) {
 
     $scope.order = $rootScope.order
     $scope.stringQrcode = undefined
@@ -59,7 +59,7 @@ app.controller("CheckoutController", function ($http, $scope, $rootScope, $locat
 
     }
     $scope.result = function () {
-        $location.path('checkout-result');
+         $window.location.href = $scope.stringQrcode
     }
     $scope.criarOrdemPagamentoDigital()
 

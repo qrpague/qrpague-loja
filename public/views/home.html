@@ -5,17 +5,13 @@
     </div>
     <div class="bx-products">
 
-        <div class="product-item" ng-repeat="(key, value) in produtos" ng-if="value.url">
-            <a ng-click=" detail( value ) ">
-                <img src="{{ value.url }}" alt="produto exemplo">
-            </a>
-            <a ng-click=" detail( value ) ">
-                <p>{{ value.titulo }}</p>
-            </a>
+        <div ng-click=" detail( value ) " class="product-item" ng-repeat="(key, value) in produtos" ng-if="value.url">
+            <img src="{{ value.url }}" alt="produto exemplo">
+            <p>{{ value.titulo }}</p>
             <img src="images/stars.png" alt="">
             <div class="bx-price">
                 <p>37 ofertas a partir de:</p>
-                <h3>{{ value.valor  | currency:'R$' }}</h3>
+                <h3>{{ value.valor | currency:'R$' }}</h3>
                 <span>9x de 74,33 sem juros</span>
             </div>
         </div>
@@ -27,17 +23,13 @@
         <div class="divisor"></div>
     </div>
     <div class="bx-products">
-        <div class="product-item" ng-repeat="(key, value) in produtos" ng-if="value.url">
-            <a ng-click=" detail( value ) ">
-                <img src="{{ value.url }}" alt="produto exemplo">
-            </a>
-            <a ng-click=" detail( value ) ">
-                <p>{{ value.titulo }}</p>
-            </a>
+        <div ng-click=" detail( value ) " class="product-item" ng-repeat="(key, value) in produtos" ng-if="value.url">
+            <img src="{{ value.url }}" alt="produto exemplo">
+            <p>{{ value.titulo }}</p>
             <img src="images/stars.png" alt="">
             <div class="bx-price">
                 <p>37 ofertas a partir de:</p>
-                <h3>{{ value.valor | currency:'R$'  }}</h3>
+                <h3>{{ value.valor | currency:'R$' }}</h3>
                 <span>9x de 74,33 sem juros</span>
             </div>
         </div>
