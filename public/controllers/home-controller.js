@@ -8,7 +8,7 @@
     conectarSocket( function( event ) {
          console.log("Socket event", event)
 
-         $scope.$broadcast('websocket-pagamento', event);
+         $scope.$emit('websocketEvent', event);
 
     });
 

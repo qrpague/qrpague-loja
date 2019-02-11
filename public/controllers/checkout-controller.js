@@ -65,7 +65,7 @@ app.controller("CheckoutController", function ($http, $scope, $rootScope, $locat
 
  
 
-    $scope.$on('websocket-pagamento', function(event, data)  {
+    $scope.$on('websocketEvent', function(event, data) {
         $location.url('checkout-result')
 
     })
