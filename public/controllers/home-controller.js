@@ -8,7 +8,7 @@
     conectarSocket( function( event ) {
          console.log("Socket event", event)
 
-         $scope.$emit('websocketEvent', event);
+         $rootScope.$broadcast('websocketEvent', { });
 
     });
 
