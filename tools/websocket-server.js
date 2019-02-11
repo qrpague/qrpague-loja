@@ -17,11 +17,12 @@ var wss = new WebSocketServer({
 wss.on('open', function open() { });
 
 wss.on('request', function (request) { 
-    console.debug( request )
-    var connection = request.accept(null, request.origin);
+     var connection = request.accept(null, request.origin);
     connection.idTerminal = request.resourceURL.query.idTerminal
 
     clients.push(connection)
+
+    console.log( connection.idTerminal  )
 
  
     connection.on('close', function () {

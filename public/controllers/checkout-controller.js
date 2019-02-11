@@ -18,7 +18,7 @@ app.controller("CheckoutController", function ($http, $scope, $rootScope, $locat
 
     $scope.criarOrdemPagamentoDigital = function () {
 
-        if ( !$scope.order ) {
+        if (!$scope.order) {
             return $location.url('carrinho')
         }
 
@@ -63,11 +63,11 @@ app.controller("CheckoutController", function ($http, $scope, $rootScope, $locat
     }
     $scope.criarOrdemPagamentoDigital()
 
- 
 
-    $scope.$on('websocketEvent', function(event, data) {
-        $location.path('checkout-result');
 
+    $scope.$on('websocketEvent', function (event, data) {
+        $location.path('/checkout-result');
+        if (!$rootScope.$$phase) $rootScope.$apply();
     })
 
 

@@ -4,7 +4,9 @@
 
 
     
-
+    $scope.home = function() {
+        $location.url('/');
+    }
 
 
 
