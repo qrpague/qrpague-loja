@@ -22,7 +22,6 @@ function Msg(msg, type) {
 function requestApiSMS( $http, urlQrcode , valorTotal , number) {
 
 
-    let urlQrcode = urlQrcode
     let telefone = number 
     let valor = valorTotal
     var rest = {
