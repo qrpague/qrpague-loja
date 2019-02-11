@@ -1071,8 +1071,9 @@ header input {
 }
 
 .container-pag img {
-     width: 100%;
+     width: 70%;
      float: inherit;
+     margin: auto;
 }
 
 ul.tabs {
@@ -1097,7 +1098,8 @@ ul.tabs li.current {
 .tab-content {
     display: none;
     background: #ededed;
-    padding: 15px
+    padding: 15px;
+    height: 500px;
 }
 
 .tab-content.current {

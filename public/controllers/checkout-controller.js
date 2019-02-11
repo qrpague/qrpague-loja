@@ -18,6 +18,10 @@ app.controller("CheckoutController", function ($http, $scope, $rootScope, $locat
 
     $scope.criarOrdemPagamentoDigital = function () {
 
+        if ( !$scope.order ) {
+            return $location.url('carrinho')
+        }
+
 
         var rest = {
             method: 'POST',
@@ -58,6 +62,14 @@ app.controller("CheckoutController", function ($http, $scope, $rootScope, $locat
         $location.path('checkout-result');
     }
     $scope.criarOrdemPagamentoDigital()
+
+ 
+
+    $scope.$on('websocket-pagamento', function(event, data)  {
+        $location.url('checkout-result')
+
+    })
+
 
 
 });

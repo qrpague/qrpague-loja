@@ -1,3 +1,4 @@
+
  app.controller("HomeController" , function($window, $http, $scope, $rootScope, $location) {
 
     $scope.produtos = []
@@ -5,7 +6,10 @@
     $rootScope.isBanner = true
 
     conectarSocket( function( event ) {
-        console.log("Socket event", event)
+         console.log("Socket event", event)
+
+         $scope.$broadcast('websocket-pagamento', event);
+
     });
 
 

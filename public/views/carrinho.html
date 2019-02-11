@@ -7,7 +7,7 @@
       <p>{{ item.titulo }}</p>
     </div>
     <div class="price">
-      <p>R$ {{ item.valor | currency:""  }}</p>
+      <p>{{ item.valor | currency:'R$'  }}</p>
     </div>
     <div class="qtd">
       <input type="text" value="1">
@@ -23,7 +23,7 @@
       <input type="text">
     </div>
     <div class="total">
-      <p>Total: R$ {{ total() | currency:""  }}</p>
+      <p>Total: {{ total() | currency:'R$'  }}</p>
     </div>
   </div>
   <div class="action-buttons">

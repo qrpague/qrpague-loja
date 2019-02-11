@@ -20,7 +20,7 @@
       </h4><img src="images/stars.png" alt="">
       <div class="bx-price">
         <p>37 ofertas a partir de:</p>
-        <h3> R$ {{ produto.valor | currency:""  }} </h3><span>9x de R$ 74,33 sem juros</span>
+        <h3> {{ produto.valor | currency:'R$'  }} </h3><span>9x de 74,33 sem juros</span>
       </div>
       <div class="action-buttons-in"><a class="bot-buy" ng-click="comprar()"><img src="images/bot-buy.svg" alt=""></a></div>
     </div>
@@ -42,8 +42,8 @@
         <img src="images/stars.png" alt="">
         <div class="bx-price">
           <p>37 ofertas a partir de:</p>
-          <h3>R$ {{ value.valor | currency:""  }}</h3>
-          <span>9x de R$ 74,33 sem juros</span>
+          <h3>{{ value.valor | currency:'R$'  }}</h3>
+          <span>9x de 74,33 sem juros</span>
         </div>
       </div>
 
