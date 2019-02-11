@@ -12,7 +12,7 @@ app.controller("CheckoutController", function ($http, $scope, $rootScope, $locat
         colorDark: "#000000",
         colorLight: "#ffffff"
     }
-
+//itms-services://?action=download-manifest&url=https://lab.sicoobnet.com.br/apps/qrpague.plist
     let qrcode = new QRCode(document.getElementById("qrcode"), options)
 
 
