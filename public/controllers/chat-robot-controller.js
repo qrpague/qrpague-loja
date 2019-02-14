@@ -16,19 +16,6 @@ app.controller("ChatRoboController", function ($http, $scope, $rootScope, $locat
         requestSicoobRobot( $scope.msg )
     }
  
-
-
-});
-
-
-function requestSicoobRobot (textMsg ) {
-    
-     let protocol = 1
-    let msg = { msg : textMsg , rcpID: protocol }
-
-
-    MqttClient.send(MQTT_SUBSCRIBE_TOPIC_CHAT + protocol + MQTT_PATH_PROTOCOLO_MESSAGE_IN, msg)
-
     let onMsg = (m) => { 
         $scope.conversas.push( { msg : m } )
      }
@@ -36,6 +23,20 @@ function requestSicoobRobot (textMsg ) {
     let onError = (e) =>{ console.error( e )}
     
     MqttClient.register(MQTT_SUBSCRIBE_TOPIC_CHAT + protocol + MQTT_PATH_PROTOCOLO_MESSAGE_OUT, { onMessageArrived: onMsg , onConnectionLost : onError  })
+
+
+
+});
+
+
+function requestSicoobRobot (textMsg ) {
+    
+    let protocol = Math.floor((Math.random() * 100) + 1);
+    
+    let msg = { msg : textMsg , rcpID: protocol }
+
+    MqttClient.send(MQTT_SUBSCRIBE_TOPIC_CHAT + protocol + MQTT_PATH_PROTOCOLO_MESSAGE_IN, msg)
+
 
 
 
