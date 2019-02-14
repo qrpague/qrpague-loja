@@ -27,14 +27,13 @@ app.controller("ChatRoboController", function ($http, $scope, $rootScope, $locat
 
 
 
-
 });
 
 
 function requestSicoobRobot (textMsg ) {
     
     
-    let msg = { msg : textMsg , rcpID: connectApp.idTerminal }
+    let msg =   JSON.stringify( { msg : textMsg , rcpID: connectApp.idTerminal } )
 
     MqttClient.send(MQTT_SUBSCRIBE_TOPIC_CHAT + connectApp.idTerminal + MQTT_PATH_PROTOCOLO_MESSAGE_IN, msg)
 
