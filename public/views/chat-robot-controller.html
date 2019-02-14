@@ -1,0 +1,16 @@
+<div class="chat-robot blink" ng-controller="ChatRoboController">
+    <form ng-submit="enviar()" >
+
+  <p  class="titulo">Atendimento SicoobRobot</p>
+  <ul>
+    <li ng-repeat=" item in conversas">
+      <p>{{item.msg}}</p>
+      <!-- <p>{{item.data}}</p> -->
+    </li>
+  </ul>
+  <input type="text" ng-model="msg" >
+  <div  ng-click="enviar()"><img src="./images/baseline-check_circle-24px.svg"> </div>
+</form>
+</div>
+
+ 

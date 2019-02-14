@@ -69,19 +69,8 @@ class MqttClient {
 }
 
 
-const MQTT_SUBSCRIBE_CANAL = "/Sicoob/"
-const MQTT_SUBSCRIBE_TOPIC_CHAT_REQUEST = "/Sicoob/chat/request"
-const MQTT_SUBSCRIBE_TOPIC_CHAT = "/Sicoob/chat/"
+const MQTT_SUBSCRIBE_TOPIC_CHAT = "/sicoob/chat/tg"
 
-const MQTT_PATH_MESSAGE = "/message"
-
-const MQTT_PATH_PROTOCOLO_MESSAGE_CLIENTE = "/message/cliente"
-const MQTT_PATH_PROTOCOLO_MESSAGE_ATENDENTE = "/message/atendente"
-
-const MQTT_PATH_PROTOCOLO_STATUS_CLIENTE = "/message/status/cliente"
-const MQTT_PATH_PROTOCOLO_STATUS_ATENDENTE = "/message/status/atendente"
-
-const MQTT_PATH_STATUS_ATENDENTE =  "/status/atendente"
-
+const MQTT_PATH_PROTOCOLO_MESSAGE_OUT = "/message/out"
+const MQTT_PATH_PROTOCOLO_MESSAGE_IN = "/message/in"
  
-const MQTT_PATH_BOT = "/bot"

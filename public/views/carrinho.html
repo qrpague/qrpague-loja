@@ -1,19 +1,18 @@
 <main class="app" ng-controller="CarrinhoController">
-     <p  ng-if="!carrinho"  class="status">seu carrinho está vazia.</p>  
-   </div>
+  <p ng-if="!carrinho" class="status">seu carrinho está vazia.</p>
   <div class="cart-list" ng-repeat="item in carrinho">
     <div class="thumb"><img src=" {{ item.thumb }}" alt=""></div>
     <div class="desc">
       <p>{{ item.titulo }}</p>
     </div>
     <div class="price">
-      <p>{{ item.valor | currency:'R$'  }}</p>
+      <p>{{ item.valor | currency:'R$' }}</p>
     </div>
     <div class="qtd">
       <input type="text" value="1">
     </div>
-    <div class="bot-remove" ng-click="delete( item.id )"> 
-      <img src="images/bot-remove.svg" alt=""> 
+    <div class="bot-remove" ng-click="delete( item.id )">
+      <img src="images/bot-remove.svg" alt="">
     </div>
   </div>
 
@@ -23,7 +22,7 @@
       <input type="text">
     </div>
     <div class="total">
-      <p>Total: {{ total() | currency:'R$'  }}</p>
+      <p>Total: {{ total() | currency:'R$' }}</p>
     </div>
   </div>
   <div class="action-buttons">
