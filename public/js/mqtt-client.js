@@ -69,7 +69,7 @@ class MqttClient {
 }
 
 
-const MQTT_SUBSCRIBE_TOPIC_CHAT = "/sicoob/chat/tg"
+const MQTT_SUBSCRIBE_TOPIC_CHAT = "/sicoob/chat/tg/"
 
 const MQTT_PATH_PROTOCOLO_MESSAGE_OUT = "/message/out"
 const MQTT_PATH_PROTOCOLO_MESSAGE_IN = "/message/in"

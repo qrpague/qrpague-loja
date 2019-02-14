@@ -14,6 +14,7 @@ app.controller("ChatRoboController", function ($http, $scope, $rootScope, $locat
         }
         $scope.conversas.push( { msg : $scope.msg } )
         requestSicoobRobot( $scope.msg )
+        $scope.msg = ""
     }
  
     let onMsg = (m) => { 
