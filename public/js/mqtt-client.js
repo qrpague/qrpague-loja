@@ -11,7 +11,7 @@ class MqttClient {
 
             let clientId = "sicoob" + ('' + Math.random() * 10).replace('.', '')
 
-            let client = new Paho.MQTT.Client(connectApp.MQTT_HOST, Number(connectApp.MQTT_PORT), clientId);
+            let client = new Paho.MQTT.Client(connectApp.MQTT_HOST, clientId);
             if (options) {
                 client.onConnectionLost = options.onConnectionLost || ((d) => { })
                 client.onMessageArrived = options.onMessageArrived || ((d) => { })
