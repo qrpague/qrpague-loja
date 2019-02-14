@@ -51,7 +51,7 @@ class MqttClient {
             let client = mqtts.find((c) => { return c.tag === tag })
             if (!client) {
                 console.log("not client paho register")
-                MqttClient.register(tag, { options: { msg: msg } })
+                MqttClient.register(tag, { options: { msg: msg , useSSL : true  } })
 
             } else {
                 let message = new Paho.MQTT.Message(msg);
