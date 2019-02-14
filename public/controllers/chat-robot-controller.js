@@ -21,6 +21,7 @@ app.controller("ChatRoboController", function ($http, $scope, $rootScope, $locat
         let msg = JSON.parse(  m.payloadString );
         msg.robot = true;
         $scope.conversas.push( msg )
+        $scope.apply()
         setTimeout( function(){
             $(".chat-robot").scrollTop( $('.chat-robot').height())
         },100)
