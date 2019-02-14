@@ -10,8 +10,13 @@ class MqttClient {
             MqttClient.unregister(tag)
 
             let clientId = "sicoob" + ('' + Math.random() * 10).replace('.', '')
+            let client = undefined
+            if ( !connectApp.MQTT_PORT ) {
+                client = new Paho.MQTT.Client(connectApp.MQTT_HOST, clientId);
 
-            let client = new Paho.MQTT.Client(connectApp.MQTT_HOST, clientId);
+            } else {
+                client = new Paho.MQTT.Client(connectApp.MQTT_HOST,connectApp.MQTT_PORT,  clientId);
+            }
             if (options) {
                 client.onConnectionLost = options.onConnectionLost || ((d) => { })
                 client.onMessageArrived = options.onMessageArrived || ((d) => { })

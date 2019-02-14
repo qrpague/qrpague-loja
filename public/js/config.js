@@ -34,9 +34,8 @@ connectApp.terminal = {
 }
 
 
-connectApp.MQTT_HOST = "lab.sicoobnet.com.br"
-connectApp.MQTT_PORT= "443"
-
+connectApp.MQTT_HOST = "10.222.18.110"
+connectApp.MQTT_PORT = 9001
 $(document).ready(function () {
   $(".tabs-menu a").click(function (event) {
     event.preventDefault();
