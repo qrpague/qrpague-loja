@@ -18,7 +18,7 @@ app.controller("ChatRoboController", function ($http, $scope, $rootScope, $locat
     }
  
     let onMsg = (m) => { 
-        let msg = m.payloadString;
+        let msg = JSON.parse(  m.payloadString );
         msg.robot = true;
         $scope.conversas.push( msg )
         setTimeout( function(){
