@@ -4,7 +4,7 @@ app.controller("ChatRoboController", function ($http, $scope, $rootScope, $locat
  
     $scope.msg
     $scope.conversas = [
-        { msg : "Ola !"  , data : new Date() }
+        { msg : "Ola !" , robot : true  , data : new Date() }
     ]
 
 
@@ -12,13 +12,16 @@ app.controller("ChatRoboController", function ($http, $scope, $rootScope, $locat
         if ( !$scope.msg ) {
             return console.log( "msg invalida")
         }
-        $scope.conversas.push( { msg : $scope.msg } )
+        $scope.conversas.push( { msg : $scope.msg ,  robot : false  } )
         requestSicoobRobot( $scope.msg )
         $scope.msg = ""
     }
  
     let onMsg = (m) => { 
-        $scope.conversas.push( { msg : m } )
+        $scope.conversas.push( { msg : m , robot: true } )
+        setTimeout( function(){
+            $(".chat-robot").scrollTop( $('.chat-robot').height())
+        },100)
      }
 
     let onError = (e) =>{ console.error( e )}
@@ -38,6 +41,8 @@ function requestSicoobRobot (textMsg ) {
     MqttClient.send(MQTT_SUBSCRIBE_TOPIC_CHAT + connectApp.idTerminal + MQTT_PATH_PROTOCOLO_MESSAGE_IN, msg)
 
 
-
+    setTimeout( function(){
+        $(".chat-robot").scrollTop( $('.chat-robot').height())
+    },100)
 
 }

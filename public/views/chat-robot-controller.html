@@ -1,10 +1,11 @@
-<div class="chat-robot blink" ng-controller="ChatRoboController">
+<div class="chat-robot" ng-controller="ChatRoboController">
     <form ng-submit="enviar()" >
 
-  <p  class="titulo">Atendimento SicoobRobot</p>
+  <p  class="titulo">SicoobRobot</p>
   <ul>
     <li ng-repeat=" item in conversas">
-      <p>{{item.msg}}</p>
+      <p style=" color : green"  ng-if="item.robot">{{item.msg}}</p>
+      <p style=" color : black" ng-if="!item.robot">{{item.msg}}</p>
       <!-- <p>{{item.data}}</p> -->
     </li>
   </ul>

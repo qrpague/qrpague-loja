@@ -5,11 +5,14 @@
     right: 0;
     bottom: 0;
     position: fixed;
-    background-color: #e4e4e48f;
+    background-color: #fef325;
     border-radius: 16px 1px 2px 4px;
     border: 1px;
     padding: 10px;
     font-size: 0.75em;
+    overflow-y: auto;
+    padding-bottom: 4em;
+
 }
 
 .chat-robot .titulo {
@@ -43,7 +46,11 @@
 .chat-robot ul li  {
     color: black;
     margin: 10px;
+    list-style-type: none; 
+}
 
+.chat-robot ul li p {
+    font-size: 1.3em;
 }
 
 .chat-robot img {
