@@ -1,13 +1,14 @@
 
 app.controller("ChatRoboController", function ($http, $scope, $rootScope, $location, $window ) {
  
- 
     $scope.msg
     $scope.conversas = [
         { msg : "Ola !" , robot : true  , data : new Date() }
     ]
 
-
+    $scope.close = function( ) {
+        $rootScope.sicoobChatWeb = !$rootScope.sicoobChatWeb
+    }
     $scope.enviar = function( ) {
         if ( !$scope.msg ) {
             return console.log( "msg invalida")
@@ -32,7 +33,7 @@ app.controller("ChatRoboController", function ($http, $scope, $rootScope, $locat
     MqttClient.register(MQTT_SUBSCRIBE_TOPIC_CHAT + connectApp.idTerminal + MQTT_PATH_PROTOCOLO_MESSAGE_OUT, { onMessageArrived: onMsg , onConnectionLost : onError  })
     MqttClient.register(MQTT_SUBSCRIBE_TOPIC_CHAT + connectApp.idTerminal + MQTT_PATH_PROTOCOLO_MESSAGE_IN, { })
 
-
+    annimationInitChat()
 
 });
 
@@ -50,5 +51,15 @@ function requestSicoobRobot (textMsg ) {
 }
 
 function updateLista() {
-    setTimeout( function(){    $(".chat-robot").scrollTop( $('.chat-robot').height()) },200)
+    setTimeout( _ =>{  
+        let height = $('.chat-robot').height();
+
+        $(".chat-robot").scrollTop( height );
+
+        
+        },200)
+}
+function annimationInitChat () {
+    $(".chat-robot").fadeIn("slow");
+
 }

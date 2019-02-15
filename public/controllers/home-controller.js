@@ -4,6 +4,8 @@
     $scope.produtos = []
     $rootScope.produtos = []   
     $rootScope.isBanner = true
+    
+    $rootScope.sicoobChatWeb = true
 
     conectarSocket( function( event ) {
          console.log("Socket event", event)

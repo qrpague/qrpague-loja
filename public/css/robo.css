@@ -1,4 +1,5 @@
 .chat-robot {
+    display: none;
     width: 30em;
     height: 25em;
     margin-right: 1em;
@@ -50,10 +51,11 @@
 }
 
 .chat-robot ul li p {
-    font-size: 1.3em;
+    font-size: 1.7em;
+    font-weight: 800;
 }
 
-.chat-robot img {
+.chat-robot .enviar>img {
     width: 30px;
     height: 23px;
     position: fixed;
@@ -61,7 +63,17 @@
     right: 15px;
  }
 
-
+ .chat-robot .fechar  {
+    display:  -webkit-box;;
+    display: -webkit-inline-box;
+ 
+}
+ .chat-robot .fechar>img  {
+    width: 30px;
+    height: 23px;
+    position: fixed;
+    right: 15px;
+ }
 
 
 .chat-robot .annimation 
@@ -193,3 +205,5 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   } 
+
+ 

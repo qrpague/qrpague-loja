@@ -1,17 +1,20 @@
-<div class="chat-robot" ng-controller="ChatRoboController">
-    <form ng-submit="enviar()" >
+<div class="chat-robot" ng-controller="ChatRoboController" ng-if="sicoobChatWeb">
+  <form ng-submit="enviar()">
 
-  <p  class="titulo">SicoobRobot</p>
-  <ul>
-    <li ng-repeat=" item in conversas">
-      <p style=" color : green"  ng-if="item.robot">{{item.msg}}</p>
-      <p style=" color : black" ng-if="!item.robot">{{item.msg}}</p>
-      <!-- <p>{{item.data}}</p> -->
-    </li>
-  </ul>
-  <input type="text" ng-model="msg" >
-  <div  ng-click="enviar()"><img src="./images/baseline-check_circle-24px.svg"> </div>
-</form>
+    <div class="fechar">
+      <p class="titulo">SicoobRobot</p>
+      <img ng-click="close()" src="./images/icon-close-chat.svg">
+    </div>
+    <ul>
+      <li ng-repeat=" item in conversas">
+        <p style=" color : green" ng-if="item.robot">{{item.msg}}</p>
+        <p style=" color : black" ng-if="!item.robot">{{item.msg}}</p>
+        <!-- <p>{{item.data}}</p> -->
+      </li>
+    </ul>
+    <input type="text" ng-model="msg">
+
+    <div class="enviar" ng-click="enviar()">
+      <img src="./images/baseline-check_circle-24px.svg"> </div>
+  </form>
 </div>
-
- 
