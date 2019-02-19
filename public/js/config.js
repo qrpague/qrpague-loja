@@ -30,7 +30,9 @@ connectApp.terminal = {
   "uf": "DF",
   "cep": "70000-000",
   "latitudeTerminal": "-15.7801",
-  "longitudeTerminal": "-47.9292"
+  "longitudeTerminal": "-47.9292,",
+  "empresa_logomarca" : "static/payment_company_icon.svg",
+  "empresa_nome" : "Mercado Rapido"
 }
 
 
