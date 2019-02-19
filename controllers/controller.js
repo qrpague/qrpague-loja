@@ -52,7 +52,9 @@ module.exports = {
 				callback: Config.URL_CALLBACK_PAY_NOTIFICATION,
 				terminal : operacao.terminal,
 				beneficiario: {},
-				itens : operacao.itens
+				itens : operacao.itens,
+				exige_endereco : true ,
+				pagamento_parcial : false
 
 			}
 
